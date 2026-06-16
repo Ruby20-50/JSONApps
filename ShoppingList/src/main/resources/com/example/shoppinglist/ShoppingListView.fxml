@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.Button?>
+
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ListView?>
+<VBox xmlns:fx="http://javafx.com/fxml/1"
+      xmlns="http://javafx.com/javafx/17"
+      fx:controller="com.example.shoppinglist.controller.ShoppingListController"
+      spacing="10">
+
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+
+    <HBox spacing="10">
+        <TextField fx:id="txt" promptText="Artikel eingeben" HBox.hgrow="ALWAYS"/>
+        <Button text="add" onAction="#onAddItem"/>
+    </HBox>
+
+    <ListView fx:id="itemListView" VBox.vgrow="ALWAYS"/>
+
+    <HBox spacing="10">
+        <Button text="mark as done" onAction="#onMarkDone" HBox.hgrow="ALWAYS"/>
+    </HBox>
+
+    <HBox spacing="10">
+        <Button text="Save" onAction="#onSave" HBox.hgrow="ALWAYS"/>
+        <Button text="Load" onAction="#onLoad" HBox.hgrow="ALWAYS"/>
+    </HBox>
+
+</VBox>
